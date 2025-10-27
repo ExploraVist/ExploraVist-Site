@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    /* Sizing */
+    --nav-size: 8vh;
+    --footer-size: 10vh;
+
+    /* Backgrounds */
+    --bg: #080808;
+    --bg-two: #0f1011;
+    --bg-three: #191a1b;
+    --bg-tint: #141516;
+
+    /* Borders */
+    --line: #37393a;
+    --line-2: #202122;
+    --line-3: #141515;
+    --line-tint: #141516;
+
+    /* Text */
+    --text: #f8f8f8;
+    --text-2: #d0d6e0;
+    --text-3: #8a8f98;
+
+    /* Colors */
+    --alt: #2458e6;
+    --alt-2: #0a21c0;
+    --alt-3: #17207a;
+    
+    /* Main Orb Colors */
+    --hero-gradient-1: #171f75; 
+    --hero-gradient-2: #0b3f8e;
+    --hero-gradient-3: #2458e6;
+}
+
+html {
+    scrollbar-width: normal;
+    scrollbar-color: var(--bg-three) var(--bg);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100vw;
+    background-color: var(--bg);
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: .1rem;
+}
+
+*,
+ *::before,
+ *::after {
+     box-sizing: border-box;
+ }

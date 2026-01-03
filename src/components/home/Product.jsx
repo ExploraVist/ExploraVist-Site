@@ -1,6 +1,7 @@
 import React from 'react';
 import { Camera, Edit, Share, Mountain, FileText, Mic, Apple, Pencil, Users, Speech, Search, Sparkles, Bluetooth } from 'lucide-react';
 import FeatureCard from './FeatureCard';
+import ValueCard from './ValueCard';
 import deviceImage from '../../imgs/device-image.png';
 import captureUI from '../../imgs/capture.png';
 import editUI from '../../imgs/edit.png';
@@ -20,21 +21,48 @@ const Product = () => {
     { icon: Sparkles, title: 'Future Updates', description: 'We are committed to adding the features YOU want' }
   ];
 
+
+  const values = [
+    {title: 'Curiosity', description: 'Explore your surroundings'},
+    {title: 'Confidence', description: 'Navigate changing surroundings'},
+    {title: 'Connection', description: 'Relive memories and build community'},
+  ]
+
+
   return (
     <section className="product-section" role="region" aria-label="Product Features">
+      {/* Values Section */}
+      <div className = 'values-container'>
+        <div className = 'div-title'> 
+          Our Values 
+        </div>
+        <h2>We strive to encourage:</h2>
+        <div className = 'values-grid'>
+          {values.map((value) => (
+            <ValueCard 
+              title={value.title}
+              description={value.description}
+            />
+          ))}
+        </div>
+      </div>
+      
       {/* Device Section */}
       <div className="device-section" role="region" aria-label="Device Overview">
         <div className="device-content">
           <div className="device-text">
-            <blockquote aria-label="Quote from CTO">
+            {/* <blockquote aria-label="Quote from CTO">
               <p>"Linear increases in convenience lead to exponential increases in independence."</p>
               <footer>
                 <cite>– Dominick Quaye, CTO</cite>
               </footer>
-            </blockquote>
+            </blockquote> */}
+
             <div className="device-features">
-              <h2>Attach to any pair of glasses</h2>
-              <p>We're simple: Just a camera, a speaker, and a microphone.</p>
+              Our Product
+              <h2>ExploraVist</h2>
+              <p>We're simple: Just a camera, a speaker, and a microphone. </p>
+              <p>Attach it to any pair of glasses. Or wear it on your favorite lanyard.</p>
               <div className="feature-grid" role="list" aria-label="Core Device Features">
                 <div className="feature-item" role="listitem">
                   <Camera size={24} aria-hidden="true" />

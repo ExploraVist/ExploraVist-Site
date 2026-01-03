@@ -1,4 +1,12 @@
+/* Original Font: Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* New Font: REM */
+@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* New Font: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 :root {
     /* Sizing */
@@ -26,6 +34,7 @@
     --alt: #2458e6;
     --alt-2: #0a21c0;
     --alt-3: #17207a;
+    --alt-4: #FFDF51;
     
     /* Main Orb Colors */
     --hero-gradient-1: #171f75; 
@@ -44,11 +53,12 @@ body {
     overflow-x: hidden;
     width: 100vw;
     background-color: var(--bg);
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color:var(--text);
 }
 
 ul {
@@ -69,4 +79,27 @@ a {
  *::before,
  *::after {
      box-sizing: border-box;
+ }
+
+ h1 {
+    font-family: "REM", sans-serif;
+ }
+
+
+ h2 {
+    font-family: "REM", sans-serif;
+    font-size: 48px;
+    font-weight: 100px;
+    font-style:normal;
+    margin-top: 0px;
+    margin-bottom: 24px;
+ }
+
+ h3 {
+    font-size: 36px;
+    margin: 0px;
+ }
+
+ .home-padding {
+    padding: 0px 7vw;
  }

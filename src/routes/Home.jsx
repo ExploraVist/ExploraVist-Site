@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <Fragment>
       <Navbar />
-      <main id="main-content" tabIndex="-1">
+      <main id="main-content" className = "home-padding" tabIndex="-1">
         <HomeHero />
         <Product />
         <WaitlistSignUp />

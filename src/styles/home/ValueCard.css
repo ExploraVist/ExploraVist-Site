@@ -1,0 +1,9 @@
+.value-card{
+    background-color: var(--bg);
+    border: solid 1px var(--text);
+    padding: 24px;
+}
+
+p{
+    
+}

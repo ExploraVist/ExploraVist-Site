@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { Link } from "react-router-dom";
 import '../../styles/home/HomeHero.css'
 
 const HomeHero = () => {
@@ -65,24 +66,45 @@ const HomeHero = () => {
   return (
     <section className='home_hero' role="region" aria-label="Hero Section">
       <div className='home_hero_wrapper' ref={gridRef}>
-        <div className='hex_grid' aria-hidden="true">
+
+        {/* <div className='hex_grid' aria-hidden="true">
           <div className='light' ref={lightRef}></div>
           <div className='grid'></div>
           <div className='grid_fade'></div>
-        </div>
-        <div className='glass_background' ref={glassRef}>
-          <h1 className='home_text_title'>
-            See Your World,<br />
-            <span>Differently.</span>
-          </h1>
-          <p className='home_text_desc'>
-            A wearable device and mobile app empowering visually impaired users through affordable, AI-powered image understanding.
-          </p>
+        </div> */}
+
+        <div className='intro_container' ref={glassRef}>
+          <div className = 'hero-text'> 
+            <h1 className='home_text_title'>
+              Innovation <br /> 
+              made accessible. <br />
+              <span> Empowerment <br />
+                made personal.</span>
+            </h1>
+            <p className='home_text_desc'>
+              ExploraVist strives to empower visually impaired users through our affordable, AI-powered wearable device.
+            </p>
+            <Link 
+              to='/about'
+              className = 'learn_button' 
+              tabIndex={0}
+            >
+              Learn More
+            </Link>
+          </div>
+          <div className="hero_img">
+            <div className = 'hexagon_upper'></div>
+            <div className = 'hexagon_lower'></div>
+            <div className = 'hexagon_img'></div>
+            
+          </div>
         </div>
       </div>
-      <div className='scroll_indicator' role="presentation" aria-hidden="true">
+
+      {/* <div className='scroll_indicator' role="presentation" aria-hidden="true">
         <div className='scroll_dot'></div>
-      </div>
+      </div> */}
+
     </section>
   )
 }

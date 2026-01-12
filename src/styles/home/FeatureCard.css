@@ -2,11 +2,27 @@
     padding: 2rem;
     transition: transform 0.3s ease;
     text-align: left;
+    border: solid 1px var(--text);
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
+    border-color: var(--alt);
 }
+
+.feature-card:hover .feature-icon{
+    color: var(--alt);
+}
+
+.feature-card:hover h3 {
+    color: var(--alt);
+}
+
+.feature-card:hover p {
+    color: var(--text);
+}
+
+
 
 .feature-icon {
     color: var(--text);

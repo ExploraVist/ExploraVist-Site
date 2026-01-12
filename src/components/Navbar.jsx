@@ -173,21 +173,27 @@ const Navbar = () => {
             />
           </Link>
           <div className='nav_links_center'>
-            {!isMobileMenu && 
-              <div>
-                <Link to='/updates' className='nav_link'>UPDATES</Link>
-                <Link to='/about' className='nav_link'>ABOUT</Link>
-              </div>
-            }
+            
           </div>
           <div className='nav_links_right'>
+            {!isMobileMenu && 
+              <div>
+                <Link to='/updates' className='nav_link'>Updates</Link>
+                <Link to='/about' className='nav_link'>About</Link>
+                <Link to='/contact' className='nav_link' title="Get Involved">Contact</Link>
+                <Link to ='/contact' className ='nav_link nav_link_waitlist' title = "Join the Waitlist">Join the Waitlist</Link>
+              </div>
+            }
+
+            {/* old contact button:
             {!isMobileMenu && 
               <div>
                 <Link to='/contact' className='nav_link_icon' title="Get Involved">
                   <Mailbox size={30} />
                 </Link>
               </div>
-            }
+            } */}
+
             {isMobileMenu &&
               <div>
                 <button 

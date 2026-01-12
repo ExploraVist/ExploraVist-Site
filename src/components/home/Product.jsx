@@ -37,18 +37,23 @@ const Product = () => {
           Our Values 
         </div>
         <h2>We strive to encourage:</h2>
-        <div className = 'values-grid'>
-          {values.map((value) => (
-            <ValueCard 
-              title={value.title}
-              description={value.description}
-            />
-          ))}
+        <div className = 'values-grid-container'>
+          <img className = 'left-hex hex' src='../src/assets/hexagon-yellow.svg'></img>
+          <div className = 'values-grid'>
+            {values.map((value) => (
+              <ValueCard 
+                title={value.title}
+                description={value.description}
+              />
+            ))}
+          </div>
+          <img className = 'right-hex hex' src='../src/assets/hexagon-blue.svg'></img>
         </div>
       </div>
       
       {/* Device Section */}
       <div className="device-section" role="region" aria-label="Device Overview">
+        <div className='div-title'>Our Product</div>
         <div className="device-content">
           <div className="device-text">
             {/* <blockquote aria-label="Quote from CTO">
@@ -57,12 +62,10 @@ const Product = () => {
                 <cite>– Dominick Quaye, CTO</cite>
               </footer>
             </blockquote> */}
-
             <div className="device-features">
-              Our Product
               <h2>ExploraVist</h2>
               <p>We're simple: Just a camera, a speaker, and a microphone. </p>
-              <p>Attach it to any pair of glasses. Or wear it on your favorite lanyard.</p>
+              <p>Attach it to any pair of glasses. Or, wear it on your favorite lanyard.</p>
               <div className="feature-grid" role="list" aria-label="Core Device Features">
                 <div className="feature-item" role="listitem">
                   <Camera size={24} aria-hidden="true" />
@@ -80,11 +83,13 @@ const Product = () => {
             </div>
           </div>
           <div className="device-image" role="img" aria-label="ExploraVist Device Preview">   
+            <img src='../src/assets/hexagon-yellow.svg' className = 'device-left-hex'></img>
             <img 
               src={deviceImage} 
               alt="ExploraVist Device attached to glasses showing the camera, speaker, and microphone components" 
               className="device-img"
             />
+            <img src='../src/assets/hexagon-blue.svg' className = 'device-right-hex'></img>
           </div>
         </div>
       </div>
@@ -92,9 +97,10 @@ const Product = () => {
       {/* App Section */}
       <div className="app-section" role="region" aria-label="App Features">
         <div className="app-header">
-          <Bluetooth className="bluetooth-icon" size={48} aria-hidden="true" />
-          <h2 className="app-pair">Pair your ExploraVist device with the App</h2>
-          <p>We believe in simple, minimalist design, built with ease of use in mind.</p>
+          {/* <Bluetooth className="bluetooth-icon" size={48} aria-hidden="true" /> */}
+          <h2>ExploraVist App</h2>
+          <p>Pair your ExploraVist device with the App. Use the built in OCR, search for photos with your voice, or organize your memories.</p> 
+          <p>We believe in simple, minimalist design, built to be compatible with your screen reader of choice.</p>
           
           <div className="app-showcase" role="region" aria-label="App Interface Previews">
             <div className="app-screenshot" role="img" aria-label="Capture Interface">
@@ -117,16 +123,20 @@ const Product = () => {
             </div>
           </div>
         </div>
-
-        <div className="app-features" role="list" aria-label="App Features List">
-          {features.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
-            />
-          ))}
+        
+        <div className = 'app-features-section'>
+          <div>Our Features</div>
+          <h2>But wait; there's <span>more:</span></h2>
+          <div className="app-features" role="list" aria-label="App Features List">
+            {features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

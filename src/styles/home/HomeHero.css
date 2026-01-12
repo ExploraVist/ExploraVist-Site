@@ -72,9 +72,9 @@
 
 .intro_container{
     display: grid;
+    padding: 0px 5%;
     grid-gap: 8px;
     grid-template-columns: 1fr 1fr;
-    align-content: center;
    
 }
 
@@ -89,45 +89,35 @@
     font-family: Inter, sans-serif;
 }
 
-.hero_img {
-    display: grid;
-    grid-template-columns: 20px 1fr 20px;
-    grid-template-rows: 20px 1fr 20px;
-    gap: 16px;
-    
-}
 
 /* source: https://css-shape.com/hexagon/ */
-.hexagon_upper{
-    grid-row: 1;
-    grid-column: 1;
+.hexagon{
     position: relative;
-    left: 100px;
-    width: 80px;
     aspect-ratio: 1/cos(30deg);
-    clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
-    background: var(--alt-4);  
+    clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%); 
 }
 
-.hexagon_img {
-    grid-row: 2;
-    grid-column: 2;
+.hex_left{
+    position: relative;
+    left: 0px;
+    width: 100px;
+    overflow: visible;
+}
+
+.hex_img{
     width: 100%;
-    aspect-ratio: 1/cos(30deg);
-    clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
-    background: var(--text);
+    max-width: 568px;
+    aspect-ratio: auto;
+    position: relative;
+    top:-5%;
 }
 
-.hexagon_lower{
-    grid-row: 3;
-    grid-column: 3;
+.hex_right{
     position: relative;
-    top: -100px;
-    left: -210px;
+    left: 0px;
     width: 160px;
-    aspect-ratio: 1/cos(30deg);
-    clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
-    background: var(--alt-2);
+    position:  relative;
+    right: 0px;
 }
 
 
@@ -157,8 +147,9 @@
     background: rgba(97, 97, 97, 0.2);
 }
 
+
 .home_text_title {
-    font-size: 3.5vw;
+    font-size: 50px;
     font-weight: 600;
     color: var(--text);
     margin-bottom: 1.5rem;

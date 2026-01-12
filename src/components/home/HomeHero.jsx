@@ -74,7 +74,7 @@ const HomeHero = () => {
         </div> */}
 
         <div className='intro_container' ref={glassRef}>
-          <div className = 'hero-text'> 
+          <div className = 'hero_text'> 
             <h1 className='home_text_title'>
               Innovation <br /> 
               made accessible. <br />
@@ -93,9 +93,10 @@ const HomeHero = () => {
             </Link>
           </div>
           <div className="hero_img">
-            <div className = 'hexagon_upper'></div>
-            <div className = 'hexagon_lower'></div>
-            <div className = 'hexagon_img'></div>
+            {/* <img src='../src/assets/hexagon-yellow.svg' className = 'hex_left'></img> */}
+            <img src ='../src/assets/hero-image.png' className = 'hex_img'></img>
+            {/* <img src='../src/assets/hexagon-blue.svg' className = 'hex_right'></img> */}
+        
             
           </div>
         </div>
